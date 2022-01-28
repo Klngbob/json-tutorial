@@ -1,3 +1,4 @@
+/* Include Guard */
 #ifndef LEPTJSON_H__
 #define LEPTJSON_H__
 
@@ -7,6 +8,7 @@ typedef struct {
     lept_type type;
 }lept_value;
 
+//lept_parse 返回值
 enum {
     LEPT_PARSE_OK = 0,
     LEPT_PARSE_EXPECT_VALUE,
