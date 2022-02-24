@@ -346,16 +346,21 @@ static void test_parse_miss_comma_or_curly_bracket() {
 }
 
 static void test_parse() {
+#if 0
     test_parse_null();
     test_parse_true();
     test_parse_false();
     test_parse_number();
-    test_parse_string();
+    
     test_parse_array();
-#if 0
+
+    test_parse_string();
+#endif
+#if 1
     test_parse_object();
 #endif
 
+#if 0
     test_parse_expect_value();
     test_parse_invalid_value();
     test_parse_root_not_singular();
@@ -366,7 +371,9 @@ static void test_parse() {
     test_parse_invalid_unicode_hex();
     test_parse_invalid_unicode_surrogate();
     test_parse_miss_comma_or_square_bracket();
-#if 0
+#endif
+ 
+#if 1
     test_parse_miss_key();
     test_parse_miss_colon();
     test_parse_miss_comma_or_curly_bracket();
@@ -424,7 +431,9 @@ int main() {
     _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 #endif
     test_parse();
+    /*
     test_access();
+    */
     printf("%d/%d (%3.2f%%) passed\n", test_pass, test_count, test_pass * 100.0 / test_count);
     return main_ret;
 }
