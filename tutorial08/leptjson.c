@@ -435,7 +435,6 @@ void lept_copy(lept_value* dst, const lept_value* src) {
             break;
         case LEPT_OBJECT:
             /* \todo */
-            
             lept_free(dst);
             dst->type=LEPT_OBJECT;
             dst->u.o.size=src->u.o.size;
